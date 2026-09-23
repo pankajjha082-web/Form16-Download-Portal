@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Form 16 Download Portal</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="portal-container">
+
+<div class="portal-card">
+
+<img src="{{ url_for('static', filename='logo.png') }}"
+class="logo">
+
+<h1>Frontier Headquarters</h1>
+
+<h2>Ranikhet</h2>
+
+<div class="portal-title">
+FORM 16 DOWNLOAD PORTAL
+</div>
+
+<div class="year">
+F.Y. 2025-26 | A.Y. 2026-27
+</div>
+
+<div class="search-box">
+
+<form action="/search" method="POST">
+
+<input
+type="text"
+name="pan"
+maxlength="10"
+placeholder="Enter PAN Number"
+required>
+
+<button type="submit">
+🔍 Search Form 16
+</button>
+
+</form>
+
+</div>
+
+<div class="secure">
+🔒 Your data is secure and confidential
+</div>
+
+<div class="footer">
+Designed & Developed By<br>
+<strong>PANKAJ KUMAR JHA</strong><br>
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
