@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Not Found</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="portal-container">
+
+<div class="portal-card">
+
+<img src="{{ url_for('static', filename='logo.png') }}"
+class="logo">
+
+<h1>Frontier Headquarters</h1>
+
+<h2>Ranikhet</h2>
+
+<div class="portal-title">
+FORM 16 DOWNLOAD PORTAL
+</div>
+
+<div class="year">
+F.Y. 2025-26 | A.Y. 2026-27
+</div>
+
+<div class="error-box">
+✕ Form 16 Not Found
+</div>
+
+<div class="pan-card">
+
+<span>PAN Number</span>
+
+<h3>{{ pan }}</h3>
+
+</div>
+
+<div class="info-box">
+Please verify your PAN Number and try again.
+</div>
+
+<a class="search-btn" href="/">
+🔍 Search Again
+</a>
+
+<div class="footer">
+Designed & Developed By<br>
+<strong>PANKAJ KUMAR JHA</strong><br>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
