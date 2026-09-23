@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Documents Found</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="portal-container">
+
+<div class="portal-card">
+
+<img src="{{ url_for('static', filename='logo.png') }}"
+class="logo">
+
+<h1>Frontier Headquarters</h1>
+
+<h2>Ranikhet</h2>
+
+<div class="portal-title">
+FORM 16 DOWNLOAD PORTAL
+</div>
+
+<div class="year">
+F.Y. 2025-26 | A.Y. 2026-27
+</div>
+
+<div class="success-box">
+✓ Form 16 Documents Found
+</div>
+
+<div class="pan-card">
+
+<span>PAN Number</span>
+
+<h3>{{ pan }}</h3>
+
+</div>
+
+{% if "Part A" in files %} <a class="download-btn"
+href="{{ url_for('download', part='Part A', pan=pan) }}">
+📄 Download Part A </a>
+{% endif %}
+
+{% if "Part B" in files %} <a class="download-btn green"
+href="{{ url_for('download', part='Part B', pan=pan) }}">
+📑 Download Part B </a>
+{% endif %}
+
+<a class="search-btn" href="/">
+🔍 Search Another PAN
+</a>
+
+<div class="footer">
+Designed & Developed By<br>
+<strong>PANKAJ KUMAR JHA</strong><br>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
